@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hirun Afreen — MCA Generative AI portfolio">
+<title>Hirun Afreen | AI • Cloud • Security</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#ff1744;--red2:#ff4d67;--black:#070707;--card:#101010;--line:#252525;--muted:#a7a7a7;--white:#f6f6f6}
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--black);color:var(--white);line-height:1.65;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 80% 10%,rgba(255,23,68,.13),transparent 28%),radial-gradient(circle at 10% 80%,rgba(255,23,68,.08),transparent 25%);z-index:-1}
+a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(7,7,7,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:700 22px "Space Grotesk";letter-spacing:-1px}.logo span{color:var(--red)}
+.links{display:flex;gap:26px;font-size:14px;color:#ccc}.links a:hover{color:var(--red)}
+.menu{display:none;background:none;border:1px solid var(--line);color:white;padding:8px 11px;border-radius:8px}
+section{padding:100px 0}.hero{min-height:100vh;display:flex;align-items:center;padding-top:130px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,23,68,.45);background:rgba(255,23,68,.07);padding:8px 13px;border-radius:999px;color:#ff8094;font-size:13px;margin-bottom:22px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 14px var(--red)}
+h1{font:700 clamp(52px,8vw,94px)/.95 "Space Grotesk";letter-spacing:-5px}
+h1 .accent{color:var(--red)}
+.hero h2{font:600 clamp(20px,3vw,30px);margin:24px 0 12px}.hero p{color:var(--muted);max-width:650px;font-size:17px}
+.actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}.btn{padding:13px 20px;border-radius:9px;border:1px solid var(--line);font-weight:700;font-size:14px;transition:.25s}.primary{background:var(--red);border-color:var(--red)}.primary:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(255,23,68,.25)}.ghost:hover{border-color:var(--red);color:var(--red)}
+.hero-card{border:1px solid var(--line);background:linear-gradient(145deg,#151515,#0b0b0b);padding:28px;border-radius:18px;box-shadow:0 25px 80px rgba(0,0,0,.5);position:relative;overflow:hidden}.hero-card:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:var(--red);filter:blur(90px);opacity:.16;right:-70px;top:-70px}
+.terminal{font:13px/2.1 monospace;color:#bdbdbd}.terminal b{color:var(--red)}.terminal .green{color:#ddd}
+.section-head{display:flex;align-items:end;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:35px}.eyebrow{color:var(--red);font:700 13px monospace;text-transform:uppercase;letter-spacing:2px}.section-head h2{font:700 40px "Space Grotesk";letter-spacing:-2px}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px}.about p{color:#bcbcbc}.facts{display:grid;grid-template-columns:1fr 1fr;gap:14px}.fact{border:1px solid var(--line);padding:20px;border-radius:12px;background:#0d0d0d}.fact strong{display:block;color:white;margin-bottom:4px}.fact span{font-size:13px;color:var(--muted)}
+.timeline{display:grid;gap:18px}.item{border-left:2px solid #2c2c2c;padding:0 0 8px 25px;position:relative}.item:before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(255,23,68,.1)}.item h3{font-size:20px}.meta{color:var(--red);font-size:13px;margin:4px 0 9px}.item p,.item li{color:var(--muted);font-size:14px}.item ul{padding-left:18px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{border:1px solid var(--line);background:var(--card);padding:26px;border-radius:15px;transition:.3s}.card:hover{transform:translateY(-6px);border-color:rgba(255,23,68,.55)}.card h3{font-size:21px;margin-bottom:10px}.card p{color:var(--muted);font-size:14px}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:11px;border:1px solid #303030;color:#bbb;padding:5px 9px;border-radius:999px}
+.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.skill{background:#0d0d0d;border:1px solid var(--line);padding:20px;border-radius:12px}.skill h3{font-size:14px;color:#fff;margin-bottom:10px}.skill p{font-size:13px;color:var(--muted)}
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.cert{border:1px solid var(--line);padding:18px;border-radius:12px;background:#0d0d0d}.cert span{font-size:12px;color:var(--red)}.cert h3{font-size:15px;margin-top:5px}
+.contact{border:1px solid var(--line);background:linear-gradient(135deg,#11080b,#0b0b0b);padding:40px;border-radius:18px;text-align:center}.contact h2{font:700 42px "Space Grotesk";letter-spacing:-2px}.contact p{color:var(--muted);margin:12px auto 24px;max-width:600px}.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:12px;text-align:center}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:none}.delay1{transition-delay:.1s}.delay2{transition-delay:.2s}.delay3{transition-delay:.3s}
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--red);width:0;z-index:30;box-shadow:0 0 12px var(--red)}
+@media(max-width:800px){.links{display:none}.menu{display:block}.hero-grid,.about{grid-template-columns:1fr}.hero-card{display:none}.cards{grid-template-columns:1fr}.skill-grid,.cert-grid{grid-template-columns:1fr 1fr}h1{letter-spacing:-3px}.section-head h2{font-size:32px}}
+@media(max-width:520px){section{padding:75px 0}.skill-grid,.cert-grid,.facts{grid-template-columns:1fr}.navin{height:64px}.hero{padding-top:105px}.hero p{font-size:15px}.contact{padding:28px 18px}.contact h2{font-size:32px}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<nav><div class="container navin"><a class="logo" href="#home">H.A<span>.</span></a><div class="links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div><button class="menu" onclick="document.querySelector('.links').classList.toggle('mobile')">☰</button></div></nav>
+
+<main id="home">
+<section class="hero"><div class="container hero-grid">
+<div class="reveal"><div class="badge"><span class="dot"></span> MCA Generative AI • Chennai, India</div><h1>HIRUN<br><span class="accent">AFREEN.</span></h1><h2>AI • Cloud • Security • Software</h2><p>Currently pursuing an MCA in Generative AI with hands-on experience in Artificial Intelligence, Machine Learning, Cloud Computing, Information Security, Python, Java, SQL and Git/GitHub.</p><div class="actions"><a class="btn primary" href="#projects">View Projects ↘</a><a class="btn ghost" href="mailto:hirunafreen@gmail.com">Contact Me</a></div></div>
+<div class="hero-card reveal delay2"><div class="terminal"><div><b>afreen@portfolio</b>:~$ whoami</div><div class="green">MCA Generative AI Student</div><div><b>afreen@portfolio</b>:~$ focus</div><div class="green">AI / ML / Cloud / Security</div><div><b>afreen@portfolio</b>:~$ status</div><div class="green">● Building • Learning • Exploring</div><br><div><b>afreen@portfolio</b>:~$ location</div><div class="green">Chennai, India</div></div></div>
+</div></section>
+
+<section id="about"><div class="container reveal"><div class="section-head"><div><div class="eyebrow">01 / Profile</div><h2>About Me</h2></div></div><div class="about"><p>I am pursuing a Master of Computer Applications in Generative AI at SRM Institute of Science and Technology, Ramapuram Campus. My background combines cloud technology, information security, software development and AI. I enjoy building practical solutions and continuously improving my technical skills.</p><div class="facts"><div class="fact"><strong>MCA — Generative AI</strong><span>SRM Institute of Science and Technology · 2026–2028</span></div><div class="fact"><strong>BCA — Cloud Technology & Security</strong><span>Crescent University · CGPA 7.35/10</span></div><div class="fact"><strong>Career Focus</strong><span>Generative AI, ML, Data Science, Cloud & Software</span></div><div class="fact"><strong>Languages</strong><span>Python · Java · SQL</span></div></div></div></div></section>
+
+<section id="experience"><div class="container reveal"><div class="section-head"><div><div class="eyebrow">02 / Journey</div><h2>Education & Experience</h2></div></div><div class="timeline">
+<div class="item"><h3>Master of Computer Applications — Generative AI</h3><div class="meta">SRM University, Ramapuram Campus · Jul 2026 – May 2028</div><p>Advanced study focused on Generative AI and related computing technologies.</p></div>
+<div class="item"><h3>Cloud Computing Intern</h3><div class="meta">Sep 2025 – Nov 2025</div><ul><li>Learned fundamentals of cloud platforms and cloud services.</li><li>Gained exposure to server setup, storage management and cloud security basics.</li><li>Assisted in understanding scalable and reliable cloud infrastructure.</li></ul></div>
+<div class="item"><h3>Bachelor of Computer Application — Cloud Technology & Information Security</h3><div class="meta">Crescent University, Vandalur · Aug 2023 – May 2026</div><p>CGPA: 7.35/10</p></div>
+</div></div></section>
+
+<section id="projects"><div class="container reveal"><div class="section-head"><div><div class="eyebrow">03 / Work</div><h2>Projects</h2></div></div><div class="cards">
+<div class="card"><h3>Dual-Key Secure Cloud File Storage</h3><p>Team project implementing client-side AES-GCM encryption, dual-key security using HKDF, and forensic audit trails for user activities.</p><div class="tags"><span class="tag">AES-GCM</span><span class="tag">HKDF</span><span class="tag">Cloud Security</span><span class="tag">Audit Trail</span></div></div>
+<div class="card"><h3>Real Estate Listing Platform</h3><p>Web-based real estate listings platform with user authentication and role-based access, managed collaboratively through GitHub.</p><div class="tags"><span class="tag">Web Development</span><span class="tag">Authentication</span><span class="tag">RBAC</span><span class="tag">GitHub</span></div><div class="actions"><a class="btn ghost" href="https://github.com/hirun-afreen/Real-Estate-listing-Platform.git" target="_blank">GitHub ↗</a></div></div>
+</div></div></section>
+
+<section id="skills"><div class="container reveal"><div class="section-head"><div><div class="eyebrow">04 / Toolkit</div><h2>Technical Skills</h2></div></div><div class="skill-grid">
+<div class="skill"><h3>Cloud & DevOps</h3><p>Cloud computing basics · AWS/Azure basics · DevOps · Virtualization</p></div>
+<div class="skill"><h3>Web Development</h3><p>HTML · CSS · React.js · Node.js · MongoDB basics · WordPress</p></div>
+<div class="skill"><h3>Security & Networking</h3><p>Information security · Network security · AES/RSA encryption · Firewalls · Access control</p></div>
+<div class="skill"><h3>Programming</h3><p>Python · Java · SQL</p></div>
+<div class="skill"><h3>Operating Systems</h3><p>Linux basics · Windows Administration</p></div>
+<div class="skill"><h3>Tools</h3><p>VS Code · Git · GitHub</p></div>
+</div></div></section>
+
+<section><div class="container reveal"><div class="section-head"><div><div class="eyebrow">05 / Credentials</div><h2>Certifications</h2></div></div><div class="cert-grid">
+<div class="cert"><span>Udemy</span><h3>AWS DevOps Engineer — Course Completion</h3></div><div class="cert"><span>Udemy</span><h3>SQL Basics</h3></div><div class="cert"><span>NPTEL · IIT Kharagpur</span><h3>Elite — Cloud Computing · Jan–Apr 2026</h3></div><div class="cert"><span>Language</span><h3>German A1 Level</h3></div><div class="cert"><span>Database</span><h3>RDBMS Fundamentals</h3></div><div class="cert"><span>Programming</span><h3>Python Basics & Java Basics</h3></div>
+</div></div></section>
+
+<section id="contact"><div class="container reveal"><div class="contact"><div class="eyebrow">06 / Connect</div><h2>Let's build something.</h2><p>Open to internship and entry-level opportunities in Generative AI, Machine Learning, Data Science, Cloud Computing and Software Development.</p><div class="contact-links"><a class="btn primary" href="mailto:hirunafreen@gmail.com">Email Me</a><a class="btn ghost" href="https://linkedin.com/in/hirun-afreen-701697333" target="_blank">LinkedIn ↗</a><a class="btn ghost" href="https://github.com/hirun-afreen" target="_blank">GitHub ↗</a></div></div></div></section>
+</main>
+<footer>© 2026 Hirun Afreen · Built with HTML, CSS & JavaScript</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+window.addEventListener('scroll',()=>{const h=document.documentElement;const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;document.getElementById('progress').style.width=pct+'%'});
+</script>
+</body>
+</html>
